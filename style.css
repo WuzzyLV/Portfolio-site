@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --color-primary: #1d1e1f;
+    --color-secondary: #292929;
+    --color-light: #AAAAAA;
+    --color-lightest: #DDDDDD;   
+
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-light);
+}
+
+
+body{
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p{
+    font-size: 0.9rem;
+}
+
+b {
+    color: var(--color-lightest);
+}
+
+.mono {
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 80rem;
+    padding: 1rem 0 0.5rem 0;
+    margin: 0rem 2rem 4rem 2rem;
+    border-bottom: 1px solid var(--color-light);
+}
+nav a{
+    text-decoration: none;
+    color: var(--color-lightest);
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 3rem;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: end;
+}
+
+#intro {
+    max-width: 28rem;
+    margin-right: 2rem;
+}
+
+
+#intro h1 {
+    color: var(--color-lightest);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#socials {
+    margin-top: 0.5rem;
+    text-align: right;
+}
+#socials a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+#socials a:hover{
+    color: var(--color-lightest);
+}
+
+#intro p {
+    max-width: 30rem;
+}
+
+#aboutme {
+    width: 26rem;
+}
+
+#aboutme p {
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
+    word-spacing: 0.1rem;
+}
+#aboutme p:last-child {
+    margin-bottom: 0;
+}
+
+#projects {
+    width: 100%;
+    margin: 0rem 0;
+    display: flex;
+    flex-direction: column;
+}
+#projects h2 {
+    color: var(--color-lightest);
+    text-align: left;
+    padding-top: 0.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#projects article{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 1rem;
+    background-color: var(--color-secondary);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+
+#projects article img:nth-child(1) {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    width: 2rem;
+    /* mirror picture on y */
+    transform: scaleX(-1);
+}
+
+#projects article img:nth-child(2) {
+    position: absolute;
+    left: 1.5rem;
+    top: 1.5rem;
+    width: 2rem;
+}
+
+#projects article h3 {
+    color: var(--color-lightest);
+}
+
+.stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.stack div {
+    margin: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    font-size: 0.8rem;
+}
+
+#projects article p{
+    text-align: center;
+}
+
+.p-about {
+
+}
+.p-about p {
+    margin-bottom: 0.5rem;
+}
+
+.third{
+    color: #CD7F32;
+}
+
+.p-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.p-links a {
+    text-decoration: none;
+    color: var(--color-lightest);
+    font-size: 1.5rem;
+    margin: 0.5rem 0.5rem;
+}

@@ -306,6 +306,11 @@ main {
   font-size: 1.2rem;
 }
 
+.education-desc a {
+  color: var(--color-lightest);
+  font: bold;
+}
+
 #skills {
   margin-top: 0;
 }
@@ -390,6 +395,9 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
+  .hero {
+    padding: 0 1rem;
+  }
   .card {
     width: auto;
   }
@@ -407,6 +415,10 @@ footer {
 
   .mono {
     font-weight: 100;
+  }
+
+  .education-card {
+    padding: 1rem 0rem;
   }
 
   .education-location {

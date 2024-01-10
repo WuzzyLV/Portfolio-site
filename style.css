@@ -23,6 +23,12 @@ body{
     flex-direction: column;
 }
 
+img {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
 p{
     font-size: 0.9rem;
 }
@@ -38,6 +44,7 @@ b {
 nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 80rem;
     padding: 1rem 0 0.5rem 0;
@@ -51,31 +58,12 @@ nav a{
     margin-right: 1rem;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 3rem;
+section {
+    margin: 6rem 0;
 }
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: end;
-}
-
-#intro {
-    max-width: 28rem;
-    margin-right: 2rem;
-}
-
-
-#intro h1 {
-    color: var(--color-lightest);
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.container {
+    max-width: 1024px;
 }
 
 #socials {
@@ -90,21 +78,37 @@ header{
     color: var(--color-lightest);
 }
 
-#intro p {
-    max-width: 30rem;
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 3rem;
 }
 
-#aboutme {
-    width: 26rem;
+#intro-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: flex-start;
 }
 
-#aboutme p {
-    margin-bottom: 1rem;
-    line-height: 1.2rem;
-    word-spacing: 0.1rem;
+
+#intro-section div h1 {
+    color: var(--color-lightest);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
-#aboutme p:last-child {
-    margin-bottom: 0;
+
+#intro-section div p {
+    /* font-size: 1.5rem; */
+    max-width: 50rem;
+}
+
+#about-section div p {
+    margin-bottom: 0.5rem;
 }
 
 #projects {
@@ -124,38 +128,36 @@ header{
 
 #projects article{
     position: relative;
-    width: 20rem;
-    height: 20rem;
+    width: 22.5rem;
     margin: 1rem;
     background-color: var(--color-secondary);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     padding: 1rem;
     transition: all 0.2s ease-in-out;
 }
 
 
-#projects article img:nth-child(1) {
+#projects article img {
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
-    width: 2rem;
+    height: 54px;
     /* mirror picture on y */
     transform: scaleX(-1);
 }
 
-#projects article img:nth-child(2) {
-    position: absolute;
-    left: 1.5rem;
-    top: 1.5rem;
-    width: 2rem;
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: var(--color-light);
 }
-
-#projects article h3 {
+.title h3 {
     color: var(--color-lightest);
+    margin-bottom: 0.5rem;
 }
 
 .stack {
@@ -163,10 +165,9 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
 }
 .stack div {
-    margin: 0.2rem;
+    margin-right: 0.2rem;
     padding: 0.2rem 0.5rem;
     border-radius: 0.1rem;
     background-color: var(--color-primary);
@@ -174,24 +175,28 @@ header{
     font-size: 0.8rem;
 }
 
-#projects article p{
-    text-align: center;
+.p-about{
+    margin-top: 1rem;
 }
 
-.p-about {
-
-}
-.p-about p {
-    margin-bottom: 0.5rem;
-}
-
-.third{
-    color: #CD7F32;
+.social-button{
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .p-links {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 
 }
